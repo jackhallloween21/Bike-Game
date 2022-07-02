@@ -1,0 +1,107 @@
+*{
+    user-select:none;
+    -webkit-user-select:none;
+    font-family: "Goldman", Helvetica, Arial, sans-serif;
+    -webkit-tap-highlight-color:transparent;
+}
+body {
+    margin:0;
+    width:100vw;
+    height:100vh;
+    background:linear-gradient(#335, grey);
+}
+h1{
+    font-size:10vmin;
+    margin:2vmin;
+    font-family:"Shojumaru";
+}
+h1 i{
+    font-family:"Shojumaru";
+}
+#loader,#startscreen{
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color:black;
+    font-size:5vmin;
+}
+#loader div{
+    width:0;
+    height:0;
+    border:10vmin solid white;
+    border-top-color:blue;
+    border-bottom-color:blue;
+    animation:spin 1s linear infinite;
+    border-radius:50%;
+    position:fixed;
+    bottom:10vmin;
+    right:10vmin;
+}
+#startscreen{
+    color:gold;
+    display:flex;
+    justify-content:center;
+    text-align:center;
+    align-items:center;
+    flex-direction:column;
+}
+#start,#label1{
+    border:1vmin solid gold;
+    padding:2vmin;
+    margin:5vmin;
+    border-radius:1vmin;
+    transition:0.5s;
+    font-size:7vmin;
+    cursor:pointer;
+}
+#startscreen b:hover,#label1:hover{
+    background-color:gold;
+    color:black;
+}
+#label1:active{
+    color:white;
+}
+@keyframes spin{
+    to{transform:rotate(360deg);}
+}
+canvas{
+    position:fixed;
+    top:0;
+    left:0;
+}
+#label2{
+    position:fixed;
+    top:2vmin;
+    left:2vmin;
+    font-size:7vmin;
+    padding:3vmin;
+    border-radius:50%;
+    background-color:rgba(255,255,255,0.5);
+    transition:0.5s;
+    cursor:pointer;
+}
+#retry{
+    position:fixed;
+    top:50vh;
+    left:50vw;
+    font-size:15vmin;
+    padding:3vmin;
+    color:white;
+    text-shadow:1px 1px 0px black,
+                -1px 1px 0px black,
+                1px -1px 0px black,
+                -1px -1px 0px black;
+    transition:0.5s;
+    transform:translate(-50%,-50%);
+    display:none;
+    cursor:pointer;
+}
+#label2:hover{
+    background-color:white;
+}
+#retry:hover{
+    color:gold;
+}
+//Were you looking for comments?
